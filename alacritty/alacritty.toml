@@ -1,0 +1,26 @@
+[window]
+dynamic_padding = true
+blur = true
+decorations = "None"
+startup_mode = "Windowed"
+padding = {x = 3, y = 3}
+# opacity = 0.75
+
+[scrolling]
+history = 10000
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+
+[font]
+size = 12
+normal = { family = "TX-02", style = "Medium" }
+# normal = { family = "Iosevka", style = "Medium" }
+# normal = { family = "Geist Mono", style = "Medium" }
+# offset = { x = 0, y = 1 }
+
+[general]
+import = [ "./themes/one_dark.toml" ]

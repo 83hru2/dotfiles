@@ -1,0 +1,104 @@
+// Play with `rise` property inside spans to adjust vertical alignment.
+{
+    "layer": "top",
+    "position": "top",
+    "name": "top_bar",
+    "width": 1920,
+    "height": 34,
+    "reload_style_on_change": true,
+    "spacing": 4,
+    "modules-left": [
+        "niri/workspaces",
+        "wlr/taskbar",
+        "mpris"
+        // "niri/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "niri/language",
+        "network",
+        "battery",
+        "backlight",
+        "wireplumber"
+    ],
+
+    "niri/workspaces": {
+        "format": "<span size='125%'>{icon}</span>",
+        "format-icons": {
+            "active": "\ue837",
+            "default": "\uef4a"
+        }
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "markup": true,
+        "icon-size": 22,
+        "on-click": "activate",
+        "homogeneous": true,
+        "justify": "center"
+    },
+    "mpris": {
+        "format": "{title} - {artist}",
+        "justify": "center",
+        "max-length": 64,
+        "artist-len": 32,
+        "title-len": 32,
+    },
+    "niri/window": {
+        "format": "{title}",
+        "rewrite": {
+            "(.*) - Brave": "Brave",
+            "83hru2(.*)": "Alacritty"
+        }
+    },
+
+    "clock": {
+        "timezone": "Asia/Samarkand",
+        "tooltip": false,
+        "format": "{:%a   %b %d   %H:%M}",
+        "interval": "60"
+    },
+    "battery": {
+        // "bat": "BAT1",
+        "interval": 60,
+        "states": {
+            "critical": 15
+        },
+        "format": "<span size='150%' rise='-6000'>{icon}</span> {capacity}%",
+        "format-charging": "<span size='150%' rise='-6000'>{icon}</span> {capacity}%",
+        "format-icons": {
+            "critical": [ "\uf306" ],
+            "charging": [ "\uf305" ],
+            "default": [ "\uf30d", "\uf30c", "\uf30a", "\uf309", "\uf308", "\uf307", "\uf304" ]
+        }
+    },
+    "backlight": {
+        "format": "<span size='130%' rise='-4500'>{icon}</span> {percent}%",
+        "format-icons": [ "\uf7e8", "\ue3ab", "\ue3ac" ]
+    },
+    "niri/language": {
+        // "format": "<span size='130%' rise='-4500'>\ue894</span> <span size='110%'>{shortDescription}</span>"
+        // "format": "<span size='110%'>{shortDescription}</span>",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "wireplumber": {
+        "format": "<span size='160%' rise='-7500'>{icon}</span> {volume}%",
+        "format-icons": {
+            "default": [ "\ue04f", "\ue04e", "\ue04d", "\ue050" ]
+        }
+    },
+    "network": {
+        "format-wifi": "<span size='100%' rise='-2500'>{icon}</span> {essid}",
+        "format-ethernet": "<span size='130%' rise='-6000'>{icon}</span> {ifname}",
+        "format-disconnected": "<span size='120%' rise='-6000'>{icon}</span>",
+        "tooltip-format": "Gateway: {gwaddr}\nSignal strength: {signalStrength}%\nFrequency: {frequency}GHz",
+        "format-icons": {
+            "wifi": [ "\ue4ca", "\ue4d9", "\ue63e" ],
+            "ethernet": [ "\uef06", "\uef02" ],
+            "disconnected": [ "\ue648" ]
+        }
+    }
+}

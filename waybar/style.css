@@ -1,0 +1,140 @@
+* {
+    font-family: "SF Pro Display", "Material Symbols Rounded";
+    font-weight: 600;
+    font-size: 15px;
+}
+
+window#waybar {
+    /* background-color: transparent; */
+    /* border: 1px solid #ffffff; */
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+tooltip {
+    font-size: 12px;
+    border: 1px solid #ffffff;
+}
+
+.modules-left {
+    color: #ffffff;
+    margin-left: 16px;
+}
+
+.modules-right {
+    color: #ffffff;
+    margin-right: 16px;
+}
+
+#workspaces button {
+    color: #ffffff;
+    padding: 0 2px;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+/* #workspaces button:hover { */
+/*     color: #000; */
+/*     transition-duration: 0.3s; */
+/*     transition-property: all; */
+/* } */
+#workspaces button.focused {
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+
+#taskbar {
+    padding-left: 5px;
+}
+#taskbar button {
+    transition-property: all;
+}
+#taskbar button.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition-duration: 0.5s;
+}
+
+#mpris {
+    border-radius: 12px;
+    transition-property: all;
+    padding: 0 10px;
+}
+#mpris:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#wireplumber {
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#wireplumber:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#network {
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#network:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#battery {
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#battery:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#backlight {
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#backlight:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#language {
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#language:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#clock {
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    padding: 0 5px;
+    border-radius: 12px;
+    /* background-color: rgba(255, 255, 255, 0.09); */
+    transition-duration: 0.5s;
+}
+#clock:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}

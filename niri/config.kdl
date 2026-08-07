@@ -1,0 +1,22 @@
+include "basicsettings.kdl" // Added by niri-settings
+include "keybinds.kdl" // Added by niri-settings
+
+output "eDP-1" {
+    mode "1920x1080@144.104"
+    scale 1.0
+}
+
+spawn-at-startup "waybar"
+spawn-at-startup "swaybg" "-i" "/home/83hru2/.config/wallpapers/cold.png" "-m" "fill"
+spawn-at-startup "swayidle" "-w" "lock" "swaylock -f"
+// spawn-at-startup "alacritty" "-e" "fastfetch"
+spawn-at-startup "xwayland-satellite"
+
+environment {
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY ":0"
+}
+
+// prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
