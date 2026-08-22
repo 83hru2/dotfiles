@@ -7,7 +7,7 @@ output "eDP-1" {
 }
 
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/83hru2/.config/wallpapers/cold.png" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/83hru2/.config/wallpapers/arch.png" "-m" "fill"
 spawn-at-startup "swayidle" "-w" "lock" "swaylock -f"
 // spawn-at-startup "alacritty" "-e" "fastfetch"
 spawn-at-startup "xwayland-satellite"

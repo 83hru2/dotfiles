@@ -4,7 +4,7 @@ blur = true
 decorations = "None"
 startup_mode = "Windowed"
 padding = {x = 3, y = 3}
-# opacity = 0.75
+# opacity = 0.8
 
 [scrolling]
 history = 10000
