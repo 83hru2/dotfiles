@@ -80,6 +80,10 @@ local SViMode = {
     provider = function(self)
         return " %2(" .. self.mode_names[self.mode].."%)  "
     end,
+    hl = function(self)
+        local mode = self.mode:sub(1, 1)
+        return { bg = self.mode_colors[mode], fg = 0x000000 }
+    end,
     -- update = {
     --     "ModeChanged",
     --     pattern = "*:*",
@@ -108,6 +112,10 @@ local SFileType = {
 
 local SRuler = {
     provider = " %3l:%2c %P ",
+    hl = function(self)
+        local mode = self.mode:sub(1, 1)
+        return { bg = self.mode_colors[mode], fg = 0x000000 }
+    end,
 }
 
 local Statusline = {
@@ -119,13 +127,13 @@ local Statusline = {
         self.mode = vim.fn.mode(1)
     end,
     hl = function(self)
-        local mode = self.mode:sub(1, 1)
+        -- local mode = self.mode:sub(1, 1)
         -- if mode == "n" then
         --     return { bg = "none", fg = "white" }
         -- else
         --     return { bg = self.mode_colors[mode], fg = 0x000000 }
         -- end
-        return { bg = self.mode_colors[mode], fg = 0x000000 }
+        return { bg = "none", fg = "white" }
     end,
     SViMode, Space, Space, SFileName,
     Align,

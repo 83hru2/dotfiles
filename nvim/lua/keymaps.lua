@@ -38,13 +38,24 @@ vim.keymap.set("n", "<m-h>", "<cmd>tabprevious<cr>", opts)
 vim.keymap.set("n", "<m-n>", "<cmd>tabnew<cr>", opts)
 vim.keymap.set("n", "<m-m>", "<cmd>tab split<cr>", opts)
 
--- Fzf.
+-- Fzf-lua.
 vim.keymap.set("n", "<leader>fo", "<cmd>FzfLua oldfiles<cr>", opts)
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", opts)
 vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua blines<cr>", opts)
 vim.keymap.set("n", "<leader>fl", "<cmd>FzfLua lines<cr>", opts)
 vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua resume<cr>", opts)
-vim.keymap.set("n", "`", "<cmd>FzfLua files cwd=~<cr>", opts)
+vim.keymap.set("n", "`", function()
+    vim.ui.input({
+        prompt = "Enter the path: ",
+        completion = "dir",
+    }, function(input)
+        if input and #input > 0 then
+            require("fzf-lua").files({ cwd = input })
+        else
+            return
+        end
+    end)
+end, opts)
 
 -- Oil.
 vim.keymap.set("n", "-", "<cmd>Oil<cr>", opts)
