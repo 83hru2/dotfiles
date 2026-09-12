@@ -57,8 +57,8 @@
     "clock": {
         "timezone": "Asia/Samarkand",
         "tooltip": false,
-        "format": "{:%a   %b %d   %H:%M}",
-        "interval": "60"
+        "format": "{:%a   %b %d   %I:%M:%S %p}",
+        "interval": 1
     },
     "battery": {
         // "bat": "BAT1",

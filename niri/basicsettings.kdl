@@ -16,7 +16,7 @@ layout {
         off
     }
 
-    gaps 8
+    gaps 4
     default-column-display "tabbed"
     center-focused-column "never"
     // empty-workspace-above-first
@@ -59,7 +59,7 @@ layout {
 }
 
 blur {
-    on
+    off
     passes 3
     offset 3
     noise 0.02

@@ -5,6 +5,7 @@ binds {
     Mod+T repeat=false { spawn "alacritty"; }
     Mod+D repeat=false { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
+    Mod+Shift+B { spawn "sh" "-c" "pgrep waybar && killall -SIGUSR1 waybar || waybar &"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
